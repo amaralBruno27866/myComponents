@@ -103,6 +103,11 @@ body {
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
+  opacity: 0;
+}
+
+.indicator.visible {
+  opacity: 1; /* Visible when the class is added */
 }
 
 .indicator::before {
@@ -143,12 +148,4 @@ body {
 
 .navigation ul li:nth-child(5).active ~ .indicator {
   transform: translateX(calc(70px * 4));
-}
-
-.navigation ul li:nth-child(6).active ~ .indicator {
-  transform: translateX(calc(70px * 5));
-}
-
-.navigation ul li:nth-child(7).active ~ .indicator {
-  transform: translateX(calc(70px * 6));
 }

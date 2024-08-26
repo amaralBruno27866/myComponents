@@ -60,10 +60,14 @@
 
     <script>
       const list = document.querySelectorAll(".list");
+      const indicator = document.querySelector(".indicator");
+
       function activelink() {
         list.forEach((item) => item.classList.remove("active"));
         this.classList.add("active");
+        indicator.classList.add("visible"); // Make the indicator visible
       }
+
       list.forEach((item) => item.addEventListener("click", activelink));
     </script>
 
