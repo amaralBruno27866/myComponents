@@ -76,6 +76,15 @@
       </ul>
     </div>
 
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activelink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activelink));
+    </script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
