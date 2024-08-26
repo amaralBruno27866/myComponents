@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/*General settings*/
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +8,12 @@
   font-family: "Roboto", sans-serif;
 }
 
+/*Color variabel*/
 :root {
   --clr: #222327;
 }
 
+/*Body component*/
 body {
   display: flex;
   justify-content: center;
@@ -19,9 +22,10 @@ body {
   background-color: var(--clr);
 }
 
+/*Main div inside og body*/
 .navigation {
   position: relative;
-  width: 500px;
+  width: 400px;
   height: 70px;
   background: #ffffff;
   display: flex;
@@ -30,11 +34,13 @@ body {
   border-radius: 10px;
 }
 
+/*List settings*/
 .navigation ul {
   display: flex;
   width: 350px;
 }
 
+/*Items list settings*/
 .navigation ul li {
   position: relative;
   list-style: none;
@@ -43,6 +49,7 @@ body {
   z-index: 1;
 }
 
+/*Link of each item list*/
 .navigation ul li a {
   position: relative;
   display: flex;
@@ -54,6 +61,7 @@ body {
   font-weight: 500;
 }
 
+/*Settings for each icom*/
 .navigation ul li a .icon {
   position: relative;
   display: block;
@@ -64,6 +72,7 @@ body {
   color: var(--clr);
 }
 
+/**/
 .navigation ul li.active a .icon {
   transform: translateY(-32px);
 }
@@ -72,7 +81,7 @@ body {
   position: absolute;
   color: var(--clr);
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.05rem;
   transition: 0.5s;
   opacity: 0;
@@ -84,9 +93,10 @@ body {
   transform: translateY(10px);
 }
 
+/*Indicator ball when a item was selected*/
 .indicator {
   position: absolute;
-  top: -50px;
+  top: -50%;
   width: 70px;
   height: 70px;
   background-color: #29fd53;
@@ -96,7 +106,6 @@ body {
 }
 
 .indicator::before {
-  content: "";
   position: absolute;
   top: 50%;
   left: -22px;
@@ -107,7 +116,6 @@ body {
 }
 
 .indicator::after {
-  content: "";
   position: absolute;
   top: 50%;
   right: -22px;
